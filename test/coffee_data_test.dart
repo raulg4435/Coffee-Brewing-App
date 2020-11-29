@@ -1,5 +1,5 @@
 //Test that the load recipes gives you the data you expect
-//this should be dependent on the recipes that you actually want to have in the app
+//This should be dependent on the recipes that you actually want to have in the app
 
 import 'package:homebrew_dripper/models/coffee_recipe.dart';
 import 'package:homebrew_dripper/models/recipe_step.dart';
