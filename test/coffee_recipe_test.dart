@@ -4,7 +4,7 @@ import 'package:test/test.dart';
 
 void main() {
   test('creates a valid coffee recipe', () {
-    //make a coffee recipe
+    // make a coffee recipe
 
     //check that it has the right data
   });
