@@ -4,8 +4,13 @@ class RecipeStep {
 
   RecipeStep(text, time) {
     //add any rules to reject invalid values
-    //for example, reject negative gram amounts
+    //for example, reject negative time amounts
     this.text = text;
-    this.time = time;
+
+    if (time > 0) {
+      this.time = time;
+    } else {
+      this.time = 0;
+    }
   }
 }
