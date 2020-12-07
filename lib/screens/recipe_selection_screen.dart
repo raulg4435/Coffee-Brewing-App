@@ -3,6 +3,7 @@ import 'package:homebrew_dripper/models/coffee_recipe.dart';
 import 'package:homebrew_dripper/screens/recipe_detail_screen.dart';
 import 'package:homebrew_dripper/utils/coffee_data.dart';
 import 'package:homebrew_dripper/utils/styling.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 Styling s = Styling();
 
@@ -96,9 +97,36 @@ class ResourceList extends StatelessWidget {
     return Column(
       children: [
         ListTile(
-          title: Text("Coffee", style: s.text(s.primary(), 14)),
-          trailing: Icon(Icons.chevron_right),
-        )
+            title: Text("Coffee", style: s.text(s.primary(), 14)),
+            trailing: Icon(Icons.chevron_right),
+            onTap: () {
+              const String toLaunch =
+                  'https://www.homegrounds.co/best-coffee-beans-bucket-list/';
+              launch(toLaunch);
+            }),
+        ListTile(
+            title: Text("Grinders", style: s.text(s.primary(), 14)),
+            trailing: Icon(Icons.chevron_right),
+            onTap: () {
+              const String toLaunch =
+                  'https://nymag.com/strategist/article/best-coffee-grinders.html';
+              launch(toLaunch);
+            }),
+        ListTile(
+            title: Text("Kettles", style: s.text(s.primary(), 14)),
+            trailing: Icon(Icons.chevron_right),
+            onTap: () {
+              const String toLaunch =
+                  'https://www.homegrounds.co/5-best-pour-coffee-kettles-gooseneck-kettles-reviewed/';
+              launch(toLaunch);
+            }),
+        ListTile(
+            title: Text("Homebrew Dripper", style: s.text(s.primary(), 14)),
+            trailing: Icon(Icons.chevron_right),
+            onTap: () {
+              const String toLaunch = 'https://prima-coffee.com/brew/coffee';
+              launch(toLaunch);
+            })
       ],
     );
   }
