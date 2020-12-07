@@ -16,6 +16,7 @@ void main() {
   test('throw ArgumentError on step text that is not a String', () {
     expect(() => RecipeStep(3.14, 1), throwsArgumentError);
   });
+
   test('throw ArgumentError on time that is negative', () {
     expect(() => RecipeStep('Cover and wait', -1), throwsArgumentError);
   });

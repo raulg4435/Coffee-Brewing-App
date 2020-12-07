@@ -13,10 +13,11 @@ class CoffeeRecipe {
     //add any rules to reject invalid values
     //for example, reject negative gram amounts
 
-    this.name = name;
-    this.grindSize = grindSize;
-    this.miscDetails = miscDetails;
-    this.steps = steps;
+    if (name is! String) {
+      throw ArgumentError();
+    } else {
+      this.name = name;
+    }
 
     if (coffeeVolumeGrams < 0) {
       throw ArgumentError();
@@ -29,7 +30,27 @@ class CoffeeRecipe {
     } else {
       this.waterVolumeGrams = waterVolumeGrams;
     }
+
+    if (grindSize is! String) {
+      throw ArgumentError();
+    } else {
+      this.grindSize = grindSize;
+    }
+
+    if (miscDetails is! String) {
+      throw ArgumentError();
+    } else {
+      this.miscDetails = miscDetails;
+    }
+
+    if (steps is! List<RecipeStep>) {
+      throw ArgumentError();
+    } else {
+      this.steps = steps;
+    }
   }
+
+  // HELPER FUNCTIONS to facilitate displaying the time for each step
 
   int secToMin(int t) {
     return t ~/ 60;
