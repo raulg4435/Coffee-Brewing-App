@@ -2,6 +2,8 @@
 import 'package:flutter_driver/flutter_driver.dart';
 import 'package:test/test.dart';
 
+// TODO: Complete Integration Tests (Happy and Sad Paths)
+
 void main() {
   group('Homebrew Dripper App', () {
     // First, define the Finders and use them to locate widgets from the
