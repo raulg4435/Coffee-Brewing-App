@@ -1,34 +1,34 @@
 import 'recipe_step.dart';
 
 class CoffeeRecipe {
-  String name;
-  int coffeeVolumeGrams;
-  String grindSize;
+  String name; // e.g. "Sweet Maria's"
   int waterVolumeGrams;
-  String miscDetails;
+  int coffeeVolumeGrams;
+  String grindSize; // i.e. 'finely' OR 'coarse'
+  String miscDetails; // e.g. "The original recipe: makes one delicious cup"
   List<RecipeStep> steps;
 
   CoffeeRecipe(name, coffeeVolumeGrams, waterVolumeGrams, grindSize,
       miscDetails, steps) {
     //add any rules to reject invalid values
     //for example, reject negative gram amounts
+
     this.name = name;
-
-    if (coffeeVolumeGrams > 0) {
-      this.coffeeVolumeGrams = coffeeVolumeGrams;
-    } else {
-      this.coffeeVolumeGrams = 0;
-    }
-
-    if (waterVolumeGrams > 0) {
-      this.waterVolumeGrams = waterVolumeGrams;
-    } else {
-      this.waterVolumeGrams = 0;
-    }
-
     this.grindSize = grindSize;
     this.miscDetails = miscDetails;
     this.steps = steps;
+
+    if (coffeeVolumeGrams < 0) {
+      throw ArgumentError();
+    } else {
+      this.coffeeVolumeGrams = coffeeVolumeGrams;
+    }
+
+    if (waterVolumeGrams < 0) {
+      throw ArgumentError();
+    } else {
+      this.waterVolumeGrams = waterVolumeGrams;
+    }
   }
 
   int secToMin(int t) {
