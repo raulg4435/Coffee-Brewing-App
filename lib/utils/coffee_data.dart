@@ -53,7 +53,7 @@ CoffeeRecipe makeTexasCoffeeSchool() {
       24,
       340,
       "coarse ground coffee",
-      "The original recipe: makes one delicious cup",
+      "Water is essential, because you need it to make coffee",
       steps);
   return recipe;
 }
@@ -71,7 +71,7 @@ CoffeeRecipe makePtsCoffee() {
       25,
       450,
       "medium-coarse ground coffee",
-      "The original recipe: makes one delicious cup",
+      "If you'd like to know more about this recipe visit: ptscoffee.com",
       steps);
   return recipe;
 }
