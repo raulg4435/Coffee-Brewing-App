@@ -1,6 +1,8 @@
 import 'package:homebrew_dripper/models/coffee_recipe.dart';
 import 'package:homebrew_dripper/models/recipe_step.dart';
 
+// TODO: Create 4 real Clever Dripper recipes
+
 CoffeeRecipe makeSweetMariasRecipe() {
   List<RecipeStep> steps = [
     RecipeStep("Add 360g water", 30),
@@ -37,6 +39,7 @@ CoffeeRecipe makeTestRecipe() {
   return recipe;
 }
 
+// returns a List of the hardcoded recipes
 List<CoffeeRecipe> getAllRecipes() {
   return [makeSweetMariasRecipe(), makeTestRecipe()];
 }

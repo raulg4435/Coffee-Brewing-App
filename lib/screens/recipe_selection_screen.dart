@@ -87,6 +87,9 @@ class RecipeList extends StatelessWidget {
   }
 }
 
+// TODO: Hardcode 4 clickable 'Resource' hyperlinks;
+// Integration Test only has to test that they are clickable links
+
 class ResourceList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

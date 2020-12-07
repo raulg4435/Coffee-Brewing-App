@@ -14,5 +14,7 @@ void main() {
     expect(recipes[0], isA<CoffeeRecipe>());
     expect(recipes[0].name, "Sweet Maria's");
     expect(recipes[0].steps, isA<List<RecipeStep>>());
+
+    // TODO: do these tests for the other 3 recipes
   });
 }

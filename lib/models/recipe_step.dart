@@ -1,16 +1,21 @@
 class RecipeStep {
   String text;
-  int time;
+  int time; // seconds
 
   RecipeStep(text, time) {
     //add any rules to reject invalid values
     //for example, reject negative time amounts
-    this.text = text;
 
-    if (time > 0) {
-      this.time = time;
+    if (text is! String) {
+      throw ArgumentError();
     } else {
-      this.time = 0;
+      this.text = text;
+    }
+
+    if (time < 0) {
+      throw ArgumentError();
+    } else {
+      this.time = time;
     }
   }
 }
