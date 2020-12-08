@@ -74,6 +74,7 @@ class RecipeList extends StatelessWidget {
       children: [
         for (CoffeeRecipe recipe in recipes)
           ListTile(
+              key: Key("${recipe.name}"),
               title: Text(recipe.name, style: s.text(s.primary(), 14)),
               trailing: Icon(Icons.chevron_right),
               onTap: () {
@@ -96,6 +97,7 @@ class ResourceList extends StatelessWidget {
     return Column(
       children: [
         ListTile(
+            key: Key('coffee-hyperlink'),
             title: Text("Coffee", style: s.text(s.primary(), 14)),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
@@ -104,6 +106,7 @@ class ResourceList extends StatelessWidget {
               launch(toLaunch);
             }),
         ListTile(
+            key: Key('grinders-hyperlink'),
             title: Text("Grinders", style: s.text(s.primary(), 14)),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
@@ -112,6 +115,7 @@ class ResourceList extends StatelessWidget {
               launch(toLaunch);
             }),
         ListTile(
+            key: Key('kettles-hyperlink'),
             title: Text("Kettles", style: s.text(s.primary(), 14)),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
@@ -120,6 +124,7 @@ class ResourceList extends StatelessWidget {
               launch(toLaunch);
             }),
         ListTile(
+            key: Key('homebrewDripper-hyperlink'),
             title: Text("Homebrew Dripper", style: s.text(s.primary(), 14)),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
