@@ -45,7 +45,9 @@ class RecipeDetailScreen extends StatelessWidget {
                     decoration: s.myBoxDecoration(),
                     child: Column(
                       children: [
-                        Text(recipe.name, style: s.subtitle(s.primary(), 18)),
+                        Text(recipe.name,
+                            key: Key("${recipe.name}-selected"),
+                            style: s.subtitle(s.primary(), 18)),
                         Divider(
                           color: s.primary(),
                           indent: 10,

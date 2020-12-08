@@ -19,24 +19,6 @@ CoffeeRecipe makeSweetMariasRecipe() {
   return recipe;
 }
 
-CoffeeRecipe makeTestRecipe() {
-  List<RecipeStep> steps = [
-    RecipeStep("Add 360g water", 5),
-    RecipeStep("Cover and wait", 5),
-    RecipeStep("Stir", 5),
-    RecipeStep("Cover and wait", 5),
-    RecipeStep("Stir", 5),
-  ];
-  CoffeeRecipe recipe = CoffeeRecipe(
-      "Test Recipe",
-      22,
-      360,
-      "finely ground coffee",
-      "The more about this recipe at: homegrounds.co",
-      steps);
-  return recipe;
-}
-
 CoffeeRecipe makeTexasCoffeeSchool() {
   List<RecipeStep> steps = [
     RecipeStep("Add 100g water", 10),
@@ -95,12 +77,44 @@ CoffeeRecipe makeHomeGrounds() {
   return recipe;
 }
 
+// The 2 recipes below are used for integration testing and need to stay
+// in the UI/program for that reason
+
+CoffeeRecipe makeTestRecipe() {
+  List<RecipeStep> steps = [
+    RecipeStep("Add 360g water", 2),
+    RecipeStep("Wait for it to bloom", 2),
+    RecipeStep("Add 1000g coffee", 2),
+    RecipeStep("Cover and wait", 2),
+    RecipeStep("Stir", 2),
+    RecipeStep("Start draining", 2),
+  ];
+  CoffeeRecipe recipe = CoffeeRecipe("Test Recipe 1", 22, 360,
+      "finely ground coffee", "This is a test", steps);
+  return recipe;
+}
+
+CoffeeRecipe makeTestRecipe2() {
+  List<RecipeStep> steps = [
+    RecipeStep("Add 240g water", 3),
+    RecipeStep("Cover and wait", 3),
+    RecipeStep("Stir", 3),
+    RecipeStep("Cover and wait", 3),
+    RecipeStep("Stir", 3),
+  ];
+  CoffeeRecipe recipe = CoffeeRecipe("Test Recipe 2", 22, 360,
+      "coarse ground coffee", "This is a test 2", steps);
+  return recipe;
+}
+
 List<CoffeeRecipe> getAllRecipes() {
   return [
     makeSweetMariasRecipe(),
     makeTexasCoffeeSchool(),
     makePtsCoffee(),
-    makeHomeGrounds()
+    makeHomeGrounds(),
+    makeTestRecipe(),
+    makeTestRecipe2()
   ];
 }
 

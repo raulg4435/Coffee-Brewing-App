@@ -83,13 +83,14 @@ class _RecipeStepsScreenState extends State<RecipeStepsScreen> {
                 color: Colors.transparent,
                 height: 40,
               ),
-              Text("$stepTimeRemaining", style: s.subtitle(s.quinary(), 96)),
+              Text("$stepTimeRemaining",
+                  key: Key('timer'), style: s.subtitle(s.quinary(), 96)),
               Divider(
                 color: Colors.transparent,
                 height: 40,
               ),
               Text("${currentRecipeStep.text}",
-                  style: s.subtitle(s.quinary(), 24)),
+                  key: Key('step'), style: s.subtitle(s.quinary(), 24)),
               Divider(
                 color: Colors.transparent,
                 height: 60,

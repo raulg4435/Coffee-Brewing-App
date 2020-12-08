@@ -11,10 +11,17 @@ void main() {
     List<CoffeeRecipe> recipes = CoffeeData.loadRecipes();
 
     // add whatever tests help give you confidence
-    expect(recipes[0], isA<CoffeeRecipe>());
-    expect(recipes[0].name, "Sweet Maria's");
-    expect(recipes[0].steps, isA<List<RecipeStep>>());
 
-    // TODO: do these tests for the other 3 recipes
+    expect(recipes[0].name, "Sweet Maria's");
+    expect(recipes[1].name, "Texas Coffee School");
+    expect(recipes[2].name, "PT's");
+    expect(recipes[3].name, "Homegrounds");
+    expect(recipes[4].name, "Test Recipe 1");
+    expect(recipes[5].name, "Test Recipe 2");
+
+    for (int i = 0; i < recipes.length; i++) {
+      expect(recipes[i], isA<CoffeeRecipe>());
+      expect(recipes[0].steps, isA<List<RecipeStep>>());
+    }
   });
 }
