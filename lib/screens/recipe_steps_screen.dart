@@ -75,78 +75,83 @@ class _RecipeStepsScreenState extends State<RecipeStepsScreen> {
     return Scaffold(
         backgroundColor: s.primary(),
         body: Center(
-            child: Column(
+            child: ListView(
+          children: [
+            Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-              Divider(
-                color: Colors.transparent,
-                height: 40,
-              ),
-              Text("$stepTimeRemaining",
-                  key: Key('timer'), style: s.subtitle(s.quinary(), 96)),
-              Divider(
-                color: Colors.transparent,
-                height: 40,
-              ),
-              Text("${currentRecipeStep.text}",
-                  key: Key('step'), style: s.subtitle(s.quinary(), 24)),
-              Divider(
-                color: Colors.transparent,
-                height: 60,
-              ),
-              Container(
-                  child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text("Steps",
-                          key: Key("steps"),
-                          style: s.subtitle(s.quinary(), 14)),
-                      Divider(
-                        color: Colors.transparent,
-                      ),
-                      Divider(
-                        color: Colors.transparent,
-                      ),
-                      Divider(
-                        color: Colors.transparent,
-                      ),
-                      Divider(
-                        color: Colors.transparent,
-                      ),
-                    ],
+                  Divider(
+                    color: Colors.transparent,
+                    height: 40,
                   ),
-                  for (RecipeStep step in remainingSteps)
-                    Container(
-                        margin: const EdgeInsets.symmetric(
-                            vertical: 6, horizontal: 50),
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 8, horizontal: 20),
-                        decoration: step == currentRecipeStep
-                            ? s.otherBoxDecoration()
-                            : s.myBoxDecoration(),
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  Text("$stepTimeRemaining",
+                      key: Key('timer'), style: s.subtitle(s.quinary(), 96)),
+                  Divider(
+                    color: Colors.transparent,
+                    height: 40,
+                  ),
+                  Text("${currentRecipeStep.text}",
+                      key: Key('step'), style: s.subtitle(s.quinary(), 24)),
+                  Divider(
+                    color: Colors.transparent,
+                    height: 60,
+                  ),
+                  Container(
+                      child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text("Steps",
+                              key: Key("steps"),
+                              style: s.subtitle(s.quinary(), 14)),
+                          Divider(
+                            color: Colors.transparent,
+                          ),
+                          Divider(
+                            color: Colors.transparent,
+                          ),
+                          Divider(
+                            color: Colors.transparent,
+                          ),
+                          Divider(
+                            color: Colors.transparent,
+                          ),
+                        ],
+                      ),
+                      for (RecipeStep step in remainingSteps)
+                        Container(
+                            margin: const EdgeInsets.symmetric(
+                                vertical: 6, horizontal: 50),
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 8, horizontal: 20),
+                            decoration: step == currentRecipeStep
+                                ? s.otherBoxDecoration()
+                                : s.myBoxDecoration(),
+                            child: Column(
                               children: [
-                                Text("${step.text}",
-                                    style: s.subtitle(s.quinary(), 12)),
-                                Divider(
-                                  color: Colors.transparent,
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text("${step.text}",
+                                        style: s.subtitle(s.quinary(), 12)),
+                                    Divider(
+                                      color: Colors.transparent,
+                                    ),
+                                    Text(
+                                        "${widget.recipe.secToMin(step.time)}:${widget.recipe.secToSec(step.time)} ",
+                                        style: s.subtitle(s.quinary(), 12)),
+                                  ],
                                 ),
-                                Text(
-                                    "${widget.recipe.secToMin(step.time)}:${widget.recipe.secToSec(step.time)} ",
-                                    style: s.subtitle(s.quinary(), 12)),
                               ],
-                            ),
-                          ],
-                        )),
-                ],
-              ))
-            ])));
+                            )),
+                    ],
+                  ))
+                ])
+          ],
+        )));
   }
 
   @override
