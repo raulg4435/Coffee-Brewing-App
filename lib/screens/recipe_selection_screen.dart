@@ -97,8 +97,8 @@ class ResourceList extends StatelessWidget {
     return Column(
       children: [
         ListTile(
-            key: Key('coffee-hyperlink'),
-            title: Text("Coffee", style: s.text(s.primary(), 14)),
+            title: Text("Coffee",
+                key: Key('coffee-hyperlink'), style: s.text(s.primary(), 14)),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
               const String toLaunch =
@@ -106,8 +106,8 @@ class ResourceList extends StatelessWidget {
               launch(toLaunch);
             }),
         ListTile(
-            key: Key('grinders-hyperlink'),
-            title: Text("Grinders", style: s.text(s.primary(), 14)),
+            title: Text("Grinders",
+                key: Key('grinders-hyperlink'), style: s.text(s.primary(), 14)),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
               const String toLaunch =
@@ -115,8 +115,8 @@ class ResourceList extends StatelessWidget {
               launch(toLaunch);
             }),
         ListTile(
-            key: Key('kettles-hyperlink'),
-            title: Text("Kettles", style: s.text(s.primary(), 14)),
+            title: Text("Kettles",
+                key: Key('kettles-hyperlink'), style: s.text(s.primary(), 14)),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
               const String toLaunch =
@@ -124,8 +124,9 @@ class ResourceList extends StatelessWidget {
               launch(toLaunch);
             }),
         ListTile(
-            key: Key('homebrewDripper-hyperlink'),
-            title: Text("Homebrew Dripper", style: s.text(s.primary(), 14)),
+            title: Text("Homebrew Dripper",
+                key: Key('homebrewDripper-hyperlink'),
+                style: s.text(s.primary(), 14)),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
               const String toLaunch = 'https://prima-coffee.com/brew/coffee';
