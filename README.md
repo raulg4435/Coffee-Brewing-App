@@ -1,16 +1,16 @@
-# homebrew_dripper
+# Coffee Brewing Mobile App
 
-A new Flutter project.
+## Purpose
 
-## Getting Started
+This multi-screen Flutter mobile app guides the user through coffee brewing instructions, given their input.
+This was the final group project for our Software Engineering II class, made in conjunction with Andrew Silva and Santiago Cabrera.
 
-This project is a starting point for a Flutter application.
+## Deploy
 
-A few resources to get you started if this is your first Flutter project:
+Download the Flutter SDK and Dart onto your local machine and run the application on an emulator.
+Once you `git clone` the project, be sure to run
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+flutter clean
+flutter pub get
+```
